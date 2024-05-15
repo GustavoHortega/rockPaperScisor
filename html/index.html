@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/js/app.js"></script>
+    <script src="/js/app.js" defer></script>
     <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,19 @@
 </head>
 <body>
     <div id="conteiner" style="border: none;">
+        <h2>Rock Paper Scisor</h2>
         <div id="screen">
-
+            <p id="playerName" style="visibility: hidde; z-index: 1;">Player</p>
+            <p id="comName" style="z-index: 2;">COM:</p>
         </div>
         <div id="choice">
             <ul id="butons" style="list-style: none;">
-                <li><button>Rock</button></li>
-                <li><button>Paper</button></li>
-                <li><button>Scisor</button></li>
+                <li><button id="rock">Rock</button></li>
+                <li><button id="paper">Paper</button></li>
+                <li><button id="scisor">Scisor</button></li>
             </ul>
 
         </div>
     </div>
-    <script>
-
-function Teste(string){
-    string = prompt();
-}
-        teste();
-    </script>
 </body>
 </html>
