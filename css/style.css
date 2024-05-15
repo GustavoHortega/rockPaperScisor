@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+    background-color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: greenyellow
+}
+
+div, button{
+    border-style: solid;
+    border-color:greenyellow ;
+    border-width: 3px;
+    border-radius: 25px;
+    background: none;
+}
+
+#screen{
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: auto;
+    margin-top: 8px;
+}
+
+#choice{
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+
+}
+
+ul#butons{
+    display: flex;
+    justify-content: center;    
+    padding: 0;
+}
+
+button{
+    margin: 5px;
+    width: 120px;
+    height: 30px;
+    color: yellowgreen;
+       
+}
