@@ -7,7 +7,7 @@ html, body {
 body{
     
     background-color: black;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     color: greenyellow;
 }
 
@@ -48,4 +48,18 @@ button{
     height: 30px;
     color: yellowgreen;
        
+}
+
+button:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    position:absolute;
+    margin-left: 175px;
 }
