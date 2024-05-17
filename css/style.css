@@ -16,7 +16,7 @@ div, button{
     border-color:greenyellow ;
     border-width: 3px;
     border-radius: 25px;
-    background: none;
+    background: black;
 }
 
 #screen{
@@ -36,7 +36,7 @@ div, button{
 
 }
 
-ul#butons{
+ul{
     display: flex;
     justify-content: center;    
     padding: 0;
@@ -59,7 +59,16 @@ h2{
     text-align: center;
 }
 
+.figure{
+    font-size: 80px;
+}
+
 p{
-    position:absolute;
-    margin-left: 175px;
+    text-align: center;
+}
+
+#result{
+    border-bottom: none;
+    margin-top: 41px;
+    padding-bottom: 10px;
 }
