@@ -72,3 +72,9 @@ p{
     margin-top: 41px;
     padding-bottom: 10px;
 }
+
+#playButton{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
