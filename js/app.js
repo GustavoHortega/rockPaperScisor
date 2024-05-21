@@ -1,5 +1,6 @@
 let player;
 let com;
+let win;
 
 document.getElementById('rock').addEventListener('click', function() {
     player = 1;
@@ -50,19 +51,19 @@ const playGame = () =>{
     }
     setTimeout(() => {
         if(player === 1 && com === 2){
-            console.log("você perdeu!")
+            win = false;
         }else if(player === 1 && com === 3){
-            console.log("você ganhou!")
+            win = false;
         }else if(player === 2 && com === 1){
-            console.log("você ganhou")
+            win = true;
         }else if(player === 2 && com === 3){
-            console.log("você perdeu!");
+            win = false;
         }else if(player === 3 && com === 1){
-            console.log("você perdeu!")
+            win = false;
         }else if(player === 3 && com === 2){
-            console.log("Você ganhou!");
+            win = true;
         }else if(player === com){
-            console.log("EMPATE!")
+            win = "Empate";
         }
     }, 1000)
 }
