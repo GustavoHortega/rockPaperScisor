@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="/js/app.js" defer></script>
+    <script src="../js/soundEfect.js"></script>
     <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
                 <img src="../images/Hands/rockHand.png" alt="rockHand" class="playerFigures">
                 <img src="../images/Hands/paperHand.png" alt="paperHand" class="playerFigures">
                 <img src="../images/Hands/scisorHand.png" alt="scisorHand" class="playerFigures">
+                <audio src="../souds/selection.wav" hidden></audio>
             </div>
        </aside>
        <aside id="comArea">
@@ -23,6 +25,17 @@
                 <img src="../images/card/card.png" alt="scisorHand" class="comFigures">
             </div>
        </aside>
+    </div>
+    <div id="hudArea">
+        <div id="playerCounter">
+            <p>Couter</p>
+        </div>
+        <div id="playButtonArea">
+            <button>play</button>
+        </div>
+        <div id="comCounter">
+            <p>Couter</p>
+        </div>
     </div>
 
 </body>

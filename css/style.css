@@ -56,3 +56,23 @@ img{
     height: 310px;
     width: 100px;
 }
+
+#hudArea{
+    display: flex;
+    height: 120px;
+}
+
+#playerCounter, #comCounter{
+    background-color: white;
+    margin: 5px;
+    width: 33.33%;
+    border: 4px solid black;
+}
+
+#playButtonArea{
+    text-align: center;
+    background-color: white;
+    margin: 5px;
+    width: 33.33%;
+    border: 4px solid black;
+}
