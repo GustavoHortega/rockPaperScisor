@@ -1,80 +1,35 @@
-html, body {
+body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body{
+    background-color: rgb(51, 135, 168);
+    font-family:pixelify sans;
     
-    background-color: black;
-    font-family:'Courier New', Courier, monospace;
-    color: greenyellow;
-}
-
-div, button{
-    border-style: solid;
-    border-color:greenyellow ;
-    border-width: 3px;
-    border-radius: 25px;
-    background: black;
 }
 
 #screen{
-    width: 400px;
-    height: 400px;
-    display: block;
-    margin: auto;
-    
-}
-
-#choice{
-    width: 500px;
-    margin: auto;
-    margin-top: 20px;
-    align-items: center;
-    text-align: center;
-
-}
-
-ul{
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 1345px;
     display: flex;
-    justify-content: center;    
-    padding: 0;
-}
-
-button{
-    margin: 5px;
-    width: 120px;
-    height: 30px;
-    color: yellowgreen;
-       
-}
-
-button:hover{
-    background-color: greenyellow;
-    color: black;
-}
-
-h2{
-    text-align: center;
-}
-
-.figure{
-    font-size: 80px;
-}
-
-p{
-    text-align: center;
-}
-
-#result{
-    border-bottom: none;
-    margin-top: 41px;
-    padding-bottom: 10px;
-}
-
-#playButton{
-    display: block;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 5px;
+
+    border:4px solid black ;
+}
+
+#playerArea{
+    width: 50%;
+}
+
+#comArea{
+    width: 50%;
+}
+
+img{
+    width: 100px;
+    height: 100px;
 }
