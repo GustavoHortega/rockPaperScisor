@@ -23,13 +23,36 @@ body{
 
 #playerArea{
     width: 50%;
+    display: flex;
 }
 
 #comArea{
     width: 50%;
+    display: flex;
+    justify-content: end;
 }
 
 img{
     width: 100px;
     height: 100px;
+    margin: 5px;
+}
+
+.playerFigures:hover{
+    border: 4px dashed black;
+}
+
+#playerChoice{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 310px;
+    width: 100px;
+}
+
+#comChoice{
+    transform: scaleX(-1);
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 310px;
+    width: 100px;
 }
