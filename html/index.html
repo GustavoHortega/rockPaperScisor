@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <script src="/js/app.js" defer></script>
-    <script src="../js/soundEfect.js"></script>
+    <script src="../js/soundEfects.js" defer></script>
     <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scisor</title>
 </head>
 <body>
     <div id="screen">
        <aside id="playerArea">
-            <div id="playerChoice">
-                <img src="../images/Hands/rockHand.png" alt="rockHand" class="playerFigures">
-                <img src="../images/Hands/paperHand.png" alt="paperHand" class="playerFigures">
-                <img src="../images/Hands/scisorHand.png" alt="scisorHand" class="playerFigures">
-                <audio src="../souds/selection.wav" hidden></audio>
+            <div class="playerChoice">
+                <img src="../images/Hands/rockHand.png" id="rockHand" class="playerFigures">
+                <img src="../images/Hands/paperHand.png" id="paperHand" class="playerFigures">
+                <img src="../images/Hands/scisorHand.png" id="scisorHand" class="playerFigures">
+                <audio src="../souds/selection.wav" class="enter"></audio>
             </div>
        </aside>
        <aside id="comArea">

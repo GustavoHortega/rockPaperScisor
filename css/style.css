@@ -42,7 +42,7 @@ img{
     border: 4px dashed black;
 }
 
-#playerChoice{
+.playerChoice{
     margin-top: auto;
     margin-bottom: auto;
     height: 310px;

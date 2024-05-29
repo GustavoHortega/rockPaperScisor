@@ -2,30 +2,34 @@ let player;
 let com;
 let win;
 
-document.getElementById('rock').addEventListener('click', function() {
+document.getElementById('rockHand').addEventListener('click', function(){
     player = 1;
     console.log(player);
-    document.getElementById('rockFigure').style.borderStyle = "solid";
-    document.getElementById('paperFigure').style.borderStyle = "none";
-    document.getElementById('scisorFigure').style.borderStyle = "none";
+    document.getElementById('rockHand').style.borderStyle = "solid";
+    document.getElementById('paperHand').style.borderStyle = "none";
+    document.getElementById('scisorHand').style.borderStyle = "none";
+    document.getElementsById('rockHand').addEventListener(()=>{
+        let som = document.getElementById('som');
+        console.log(som);
+    });
 
         
 })
 
-document.getElementById('paper').addEventListener('click', function(){
+document.getElementById('paperHand').addEventListener('click', function(){
     player = 2
     console.log(player)
-    document.getElementById('rockFigure').style.borderStyle = "none";
-    document.getElementById('paperFigure').style.borderStyle = "solid";
-    document.getElementById('scisorFigure').style.borderStyle = "none";
+    document.getElementById('rockHand').style.borderStyle = "none";
+    document.getElementById('paperHand').style.borderStyle = "solid";
+    document.getElementById('scisorHand').style.borderStyle = "none";
 })
 
-document.getElementById('scisor').addEventListener('click', function(){
+document.getElementById('scisorHand').addEventListener('click', function(){
     player = 3;
     console.log(player);
-    document.getElementById('rockFigure').style.borderStyle = "none";
-    document.getElementById('paperFigure').style.borderStyle = "none";
-    document.getElementById('scisorFigure').style.borderStyle = "solid";
+    document.getElementById('rockHand').style.borderStyle = "none";
+    document.getElementById('paperHand').style.borderStyle = "none";
+    document.getElementById('scisorHand').style.borderStyle = "solid";
 })
 
 const playGame = () =>{
