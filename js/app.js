@@ -1,6 +1,17 @@
 let player;
-let com = 4;
+let com ;
 let win;
+
+const hideComHands = () =>{
+    document.getElementById('comRockHand').style.visibility = "hidden";
+    document.getElementById('comPaperHand').style.visibility = "hidden";
+    document.getElementById('comScisorHand').style.visibility = "hidden";
+    document.getElementById('comRockCard').style.visibility = "visible";
+    document.getElementById('comPaperCard').style.visibility = "visible";
+    document.getElementById('comScisorCard').style.visibility = "visible";
+}
+
+hideComHands();
 
 document.getElementById('rockHand').addEventListener('click', function(){
     player = 1;
@@ -27,33 +38,42 @@ document.getElementById('scisorHand').addEventListener('click', function(){
     document.getElementById('scisorHand').style.borderStyle = "solid";
 })
 
-if(com > 3){
-    document.getElementById('comRockHand').style.visibility = "hidden";
-    document.getElementById('comPaperHand').style.visibility = "hidden";
-    document.getElementById('comScisorHand').style.visibility = "hidden";
-}
-
 const playGame = () =>{
-    com = Math.floor(Math.random() * 3) + 1;
-    console.log("COM", com)
-
-    switch(com){
-        case 1:
-            document.getElementById('comRockHand').style.visibility = "visible";
-            document.getElementById('comPaperHand').style.visibility = "hidden";
-            document.getElementById('comScisorHand').style.visibility = "hidden";
-        break
-        case 2:
-            document.getElementById('comRockHand').style.visibility = "hidden";
-            document.getElementById('comPaperHand').style.visibility = "visible";
-            document.getElementById('comScisorHand').style.visibility = "hidden";
-        break
-        case 3:
-            document.getElementById('comRockHand').style.visibility = "hidden";
-            document.getElementById('comPaperHand').style.visibility = "hidden";
-            document.getElementById('comScisorHand').style.visibility = "visible";
-        break
-    };
+    hideComHands();
+    
+    setTimeout(()=>{
+        com = Math.floor(Math.random() * 3) + 1;
+        console.log("COM", com)
+        switch(com){
+            case 1:
+                document.getElementById('comRockHand').style.visibility = "visible";
+                document.getElementById('comPaperHand').style.visibility = "hidden";
+                document.getElementById('comScisorHand').style.visibility = "hidden";
+                document.getElementById('comRockCard').style.visibility = "hidden";
+                document.getElementById('comPaperCard').style.visibility = "visible";
+                document.getElementById('comScisorCard').style.visibility = "visible";
+            break
+            case 2:
+                document.getElementById('comRockHand').style.visibility = "hidden";
+                document.getElementById('comPaperHand').style.visibility = "visible";
+                document.getElementById('comScisorHand').style.visibility = "hidden";
+                document.getElementById('comRockCard').style.visibility = "visible";
+                document.getElementById('comPaperCard').style.visibility = "hidden";
+                document.getElementById('comScisorCard').style.visibility = "visible";
+            break
+            case 3:
+                document.getElementById('comRockHand').style.visibility = "hidden";
+                document.getElementById('comPaperHand').style.visibility = "hidden";
+                document.getElementById('comScisorHand').style.visibility = "visible";
+                document.getElementById('comRockCard').style.visibility = "visible";
+                document.getElementById('comPaperCard').style.visibility = "visible";
+                document.getElementById('comScisorCard').style.visibility = "hidden";
+            break
+            default:
+            
+            break
+        };
+    }, 1000)
 
     setTimeout(() => {
         if(player === 1 && com === 2){
@@ -71,9 +91,8 @@ const playGame = () =>{
         }else if(player === com){
             win = "Empate";
         }
-        com = 4;
-        console.log(com)
         console.log(win);
     }, 1000)
-
+    
 }
+
