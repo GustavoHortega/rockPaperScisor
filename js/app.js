@@ -1,6 +1,8 @@
 let player;
 let com ;
 let win;
+let playerCounter = 0;
+let comCounter = 0;
 
 const hideComHands = () =>{
     document.getElementById('comRockHand').style.visibility = "hidden";
@@ -9,6 +11,12 @@ const hideComHands = () =>{
     document.getElementById('comRockCard').style.visibility = "visible";
     document.getElementById('comPaperCard').style.visibility = "visible";
     document.getElementById('comScisorCard').style.visibility = "visible";
+    document.getElementById('cDot1').style.visibility = "hidden";
+    document.getElementById('cDot2').style.visibility = "hidden";
+    document.getElementById('cDot3').style.visibility = "hidden";
+    document.getElementById('pDot1').style.visibility = "hidden";
+    document.getElementById('pDot2').style.visibility = "hidden";
+    document.getElementById('pDot3').style.visibility = "hidden";
 }
 
 hideComHands();
@@ -89,10 +97,40 @@ const playGame = () =>{
         }else if(player === 3 && com === 2){
             win = true;
         }else if(player === com){
-            win = "Empate";
+            win = null;
         }
         console.log(win);
     }, 1000)
     
+   setTimeout(()=>{ 
+    if(win === true){
+        playerCounter = playerCounter + 1;
+    }else if(win === false){
+        comCounter = comCounter + 1;
+    }else if(win === null){
+
+    }
+    console.log(playerCounter, comCounter);
+    }, 2000);
+
+    setTimeout(()=>{
+        switch(playerCounter){
+        case 1:
+            document.getElementById('pDot1').style.visibility = "visible";
+            document.getElementById('pDot2').style.visibility = "hidden";
+            document.getElementById('pDot3').style.visibility = "hidden";
+        break
+        case 2:
+            document.getElementById('pDot1').style.visibility = "visible";
+            document.getElementById('pDot2').style.visibility = "visible";
+            document.getElementById('pDot3').style.visibility = "hidden";
+        break
+        case 3:
+            document.getElementById('pDot1').style.visibility = "visible";
+            document.getElementById('pDot2').style.visibility = "visible";
+            document.getElementById('pDot3').style.visibility = "visible";
+        break;
+        }
+    },500); 
 }
 

@@ -83,3 +83,7 @@ img{
     bottom: 350px;
     margin-top: 10px;
 }
+
+#comCounter, #playerCounter{
+    display: flex;
+}
