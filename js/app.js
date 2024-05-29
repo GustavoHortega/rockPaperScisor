@@ -1,5 +1,5 @@
 let player;
-let com;
+let com = 4;
 let win;
 
 document.getElementById('rockHand').addEventListener('click', function(){
@@ -27,27 +27,34 @@ document.getElementById('scisorHand').addEventListener('click', function(){
     document.getElementById('scisorHand').style.borderStyle = "solid";
 })
 
+if(com > 3){
+    document.getElementById('comRockHand').style.visibility = "hidden";
+    document.getElementById('comPaperHand').style.visibility = "hidden";
+    document.getElementById('comScisorHand').style.visibility = "hidden";
+}
+
 const playGame = () =>{
     com = Math.floor(Math.random() * 3) + 1;
     console.log("COM", com)
 
     switch(com){
         case 1:
-            document.getElementById('comRockFigure').style.borderStyle = "solid";
-            document.getElementById('comPaperFigure').style.borderStyle = "none";
-            document.getElementById('comScisorFigure').style.borderStyle = "none";
+            document.getElementById('comRockHand').style.visibility = "visible";
+            document.getElementById('comPaperHand').style.visibility = "hidden";
+            document.getElementById('comScisorHand').style.visibility = "hidden";
         break
         case 2:
-            document.getElementById('comRockFigure').style.borderStyle = "none";
-            document.getElementById('comPaperFigure').style.borderStyle = "solid";
-            document.getElementById('comScisorFigure').style.borderStyle = "none";
+            document.getElementById('comRockHand').style.visibility = "hidden";
+            document.getElementById('comPaperHand').style.visibility = "visible";
+            document.getElementById('comScisorHand').style.visibility = "hidden";
         break
         case 3:
-            document.getElementById('comRockFigure').style.borderStyle = "none";
-            document.getElementById('comPaperFigure').style.borderStyle = "none";
-            document.getElementById('comScisorFigure').style.borderStyle = "solid";
+            document.getElementById('comRockHand').style.visibility = "hidden";
+            document.getElementById('comPaperHand').style.visibility = "hidden";
+            document.getElementById('comScisorHand').style.visibility = "visible";
         break
-    }
+    };
+
     setTimeout(() => {
         if(player === 1 && com === 2){
             win = false;
@@ -64,5 +71,9 @@ const playGame = () =>{
         }else if(player === com){
             win = "Empate";
         }
+        com = 4;
+        console.log(com)
+        console.log(win);
     }, 1000)
+
 }

@@ -17,15 +17,18 @@
                 <img src="../images/Hands/rockHand.png" id="rockHand" class="playerFigures">
                 <img src="../images/Hands/paperHand.png" id="paperHand" class="playerFigures">
                 <img src="../images/Hands/scisorHand.png" id="scisorHand" class="playerFigures">
-                <audio src="../souds/selection.wav"></audio>
-                <audio src="../souds/clickSelection.wav"></audio>
+                <audio src="../souds/selection.wav" hidden></audio>
+                <audio src="../souds/clickSelection.wav" hidden></audio>
             </div>
        </aside>
        <aside id="comArea">
             <div id="comChoice">
-                <img src="../images/card/card.png" alt="rockHand" class="comFigures">
-                <img src="../images/card/card.png" alt="paperHand" class="comFigures">
-                <img src="../images/card/card.png" alt="scisorHand" class="comFigures">
+                <img src="../images/card/card.png" class="comFigures">               
+                <img src="../images/card/card.png" class="comFigures">
+                <img src="../images/card/card.png" class="comFigures">    
+                <img src="../images/Hands/rockHand.png" id="comRockHand" class="comHands">
+                <img src="../images/Hands/paperHand.png" id="comPaperHand" class="comHands">
+                <img src="../images/Hands/scisorHand.png" id="comScisorHand" class="comHands">          
             </div>
        </aside>
     </div>
@@ -34,7 +37,7 @@
             <p>Couter</p>
         </div>
         <div id="playButtonArea">
-            <button>play</button>
+            <button onclick="playGame()">play</button>
         </div>
         <div id="comCounter">
             <p>Couter</p>
