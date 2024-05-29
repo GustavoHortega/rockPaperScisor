@@ -8,11 +8,6 @@ document.getElementById('rockHand').addEventListener('click', function(){
     document.getElementById('rockHand').style.borderStyle = "solid";
     document.getElementById('paperHand').style.borderStyle = "none";
     document.getElementById('scisorHand').style.borderStyle = "none";
-    document.getElementsById('rockHand').addEventListener(()=>{
-        let som = document.getElementById('som');
-        console.log(som);
-    });
-
         
 })
 
